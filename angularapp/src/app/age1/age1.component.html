@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-6 text-left rounded shadow py-5">  
+<p>Component 1</p>
+<div class="col">
+    <div class="input-field col m2">
+        <label for="txtdate">Select your Date of birth</label>
+        <input type="date" [(ngModel)]="birthdate" id="txtdate">
+    </div>
+    <!-- <div class="input-field col m2">
+        <input type="number" [(ngModel)]="age" id="age">
+    </div> -->
+    <div>
+        <button class="btn btn-primary " (click)="CalculateAge(birthdate)">Calculate Age</button>
+    </div>
+    <p>Your age is :- {{ age }}</p> 
+</div>
+</div>
+</div>
+</div>

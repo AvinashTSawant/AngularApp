@@ -1,0 +1,17 @@
+#sect1 {  
+    /* height: 650 px;    */
+  /* background-color: rgb(12, 191, 245); */
+     background: url("https://www.orfonline.org/wp-content/uploads/2022/09/cyberwarfare.jpg")no-repeat center center;
+    background-size: cover;
+    background-size: 100% ;  
+     
+  } 
+
+  #Logout{
+   color: darkgreen;
+/* margin-left: 800px; */
+    }
+    a{
+      color: black;
+      font-size: 20px;
+    }

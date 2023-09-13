@@ -1,0 +1,25 @@
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+
+  /* body {
+    font-family: Arial, sans-serif;
+  }
+   */
+
+  .printable-list ul {
+
+    list-style: none;
+    padding: 0;
+    columns: 2; /* Split the list into two columns */
+   
+  }
+  
+  .printable-list ul li {
+    margin-bottom: 10px;
+  }

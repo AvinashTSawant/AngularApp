@@ -1,0 +1,44 @@
+label{
+    color: red;
+
+}
+
+#login{
+    color: rgb(10, 241, 241);
+    font-size: x-large;
+    
+}
+input[type="text"]
+{
+  text-transform: capitalize;
+  color: rgb(12, 191, 245);
+}
+
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched{
+    border: 2px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
+
+input.ng-valid.ng-touched,
+select.ng-valid.ng-touched{
+    border: 2px solid rgb(22, 230, 3);
+    box-shadow: 0 0 13px #ff000021;
+}
+
+input [type="radio"]
+{
+  margin: 20px;
+}  
+
+/* 
+#sect1 {  
+  height: 650 px;    
+ background-color: rgb(12, 191, 245);
+   background: url("https://www.orfonline.org/wp-content/uploads/2022/09/cyberwarfare.jpg")no-repeat center center;
+  background-size: cover;
+  background-size: 100% ;  
+   
+}  */
+

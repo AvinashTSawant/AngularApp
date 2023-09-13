@@ -1,0 +1,19 @@
+<div id="main" class="text-center text-danger">
+    <div class="country">
+      <label for="country">Country:-  </label>
+      <select [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+          <option >Stelect country</option>
+        <option  *ngFor="let country of Countries">
+          {{ country }}
+        </option>
+      </select>
+    </div>
+    <div class="states ">
+      <label for="states">States:-  </label>
+      <select class="a1">
+        <option *ngFor="let state of filteredStates">
+          {{ state.name }}
+        </option>
+      </select>
+    </div>
+  </div>

@@ -1,0 +1,43 @@
+// import { Injectable } from '@angular/core';
+// import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+// import { Observable } from 'rxjs';
+
+// @Injectable({
+//   providedIn: 'root'
+// })
+// export class AuthgaurdGuard implements CanActivate {
+//   canActivate(
+//     next: ActivatedRouteSnapshot,
+//     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+//     return true;
+//   }
+  
+// }
+
+import { Injectable } from '@angular/core';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthgaurdGuard implements CanActivate  {
+
+  /**
+   *
+   */
+  constructor(private _route: Router) {
+    
+    
+  }
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    
+    if (localStorage.getItem('username') != null) {
+      return true;
+    } else {
+      this._route.navigate(['/login']);
+      return false;
+    }
+  }
+  
+}

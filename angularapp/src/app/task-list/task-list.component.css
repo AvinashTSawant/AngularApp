@@ -1,0 +1,55 @@
+.addTask {
+    /* margin-left: 35%; */
+    margin-top: 1%;
+}
+.status {
+    /* margin-left: 35%; */
+}
+* {
+    margin-top: 1%;
+}
+#complete {
+ color: white;  
+ background-color: green; 
+ margin-left: 3%;
+}
+#pending {
+    color: white;
+    background-color: darkgoldenrod;
+}
+.container {
+    width: 700px; 
+}
+.btnAll {
+    margin-left: 2%;
+    border-radius: 20%;
+    background-color: brown;
+    width: 70px;
+    font-weight: 600;
+}
+.btncompleted {
+    margin-left: 2%;
+    border-radius: 20%;
+    background-color: green;
+    font-weight: 600;
+    
+}
+.btnpending {
+    margin-left: 2%;
+    border-radius: 20%;
+    background-color: goldenrod;
+    font-weight: 600;
+
+}
+.current-filter {
+    text-align: center;
+}
+.addbtn{
+    /* width: 30px; */
+    margin-left: 50px;
+}
+#add{
+    /* display: inline-block; */
+    width: 100px;
+    margin-right: 20px;
+}

@@ -1,0 +1,103 @@
+
+<!-- <div>
+    <app-task-form></app-task-form>
+</div> -->
+
+<!-- <div class="addbtn">
+    <button type="submit" (click)="add()" class="btn btn-primary" id="add">Add Task</button>
+
+    <button type="submit" (click)="list()" class="btn btn-primary" id="list">Chack list</button>
+</div> -->
+
+
+
+  <div class="container">
+    <div class="addTask">
+        <h1 style="text-align: center;">Task List</h1>
+   
+        <div class="col-md-4 mb-2">
+            <label for="productId">Search by Task Tital</label>
+            <input type="text" class="form-control" id="productId" placeholder="Enter task Tital" [(ngModel)]="namesearch">
+        </div>
+
+        <table class="table table-responsive table-border">
+            <thead class="thead">
+                <tr>
+                    <th>Title</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let task of tasks | filter:namesearch ">
+
+                    <td>{{task.title}}</td>
+                    <td>{{task.dueDate}}</td>
+                    <td> <button id="complete" *ngIf="!task.completed" (click)="markAsCompleted(task)">Mark
+                            Completed</button>
+                        <button id="pending" *ngIf="task.completed" (click)="markAsPending(task)">Mark Pending</button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <!-- <div *ngFor="let task of tasks">
+        <div [class.completed]="task.completed">
+
+          <span>{{ task.title }}</span>
+          <span  class="due-date">Due Date: {{ task.dueDate | date }}</span>
+          <button id="complete" *ngIf="!task.completed" (click)="markAsCompleted(task)">Mark Completed</button>
+          <button id="pending" *ngIf="task.completed" (click)="markAsPending(task)">Mark Pending</button>
+        </div>
+      </div> -->
+
+    </div>
+ 
+    <div class="container ">
+        <div class="filter-buttons">
+            <!-- <button class="btnAll" (click)="filterTasks('all')">All</button>
+            <button class="btncompleted" (click)="filterTasks('completed')">Completed</button>
+            <button class="btnpending" (click)="filterTasks('pending')">Pending</button> -->
+
+            <button  (click)="add()" class="btnAll" id="add">Add Task</button>
+            <button  (click)="list()" class="btncompleted" id="list">Chack list</button>
+        </div>
+    </div>
+    
+<div class="container addTask"  *ngIf="show" >
+
+    <div class="container ">
+        <div class="filter-buttons">
+            <button class="btnAll" (click)="filterTasks('all')">All</button>
+            <button class="btncompleted" (click)="filterTasks('completed')">Completed</button>
+            <button class="btnpending" (click)="filterTasks('pending')">Pending</button>
+
+           
+        </div>
+    </div>
+
+    <!-- <p style="text-align: center;">Tasks</p> -->
+<div style="margin-right: 2%;" class="current-filter">
+    Current Filter: {{ filter }}
+</div>
+
+    <table class="table table-border ">
+
+
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>Due Date</th>
+                <th>isCompleted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let key of filteredTasks ">
+                <td>{{key.title}}</td>
+                <td>{{key.dueDate}}</td>
+                <td>{{key.completed}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

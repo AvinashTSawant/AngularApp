@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-6 text-left rounded shadow py-5">   
+            <div class="row justify-content-center">Student Registration Form</div>    
+        <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+             <div class="form-group">
+                <label for="username">UserName</label>
+                <input type="text" class="form-control"  #name="ngModel" id="username" [(ngModel)]="username" name="username" ngModel placeholder="Enter username" required>
+                <small class="text-danger" *ngIf="name.touched && !name.valid">Please enter valid UserName</small>
+                <!-- <small *ngIf="username">User name is : {{username}}</small> -->
+            </div> 
+             <!-- <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" name="email" ngModel placeholder="Enter email address" email required>
+             </div>   -->
+             <div class="form-group">
+
+                <label for="email">Email</label>
+
+                <input type="text" class="form-control" #email="ngModel" id="email" name="email" ngModel placeholder="Enter email address" email required>
+
+                <small class="text-danger" *ngIf="email.touched && !email.valid">Please enter valid email</small>
+
+            </div>
+
+             <div class="form-group">
+                <label for="course">Select the course</label>
+                <select class="form-control" name="course" id="course"  [(ngModel)]="defaultCourseValue" ngModel required>
+                    <option value="Angular">Angular</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="TypeScript">TypeScript</option>
+                </select>
+             </div>
+
+             <div ngModelGroup="address"> 
+                <div class="form-group">  
+                  <label for="country">Country</label>  
+                  <input placeholder="Enter country" class="form-control"  #country="ngModel" type="text" ngModel name="country" required>
+                  <small class="text-danger" *ngIf="country.touched && !country.valid">Please enter valid country</small>
+                </div>    
+
+                <div class="form-group">
+                  <label for="state">State</label> 
+                  <input placeholder="Enter State" class="form-control" #state="ngModel" type="text" ngModel name="state" required>
+                  <small class="text-danger" *ngIf="state.touched && !state.valid">Please Enter valid State</small>
+                </div> 
+  
+              </div>
+             <!-- <button type="submit" [disabled]="!myForm.valid" class="btn btn-success mt-2">Submit</button> -->
+             <button type="submit" class="btn btn-success mt-2">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+
+
+ 

@@ -1,0 +1,62 @@
+table,
+tr,
+th,
+td {
+  border: 2px solid rgb(7, 1, 2);
+  border-collapse: collapse;
+  color: black;
+  
+  
+}
+
+/* table{
+    background-image: url("https://img.freepik.com/free-photo/nature-colorful-landscape-dusk-cloud_1203-5705.jpg"); 
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  } */
+
+
+/* table {
+
+  width: 80%;
+} */
+#main{
+  margin-left: 100px;
+}
+
+thead{
+    z-index: 5;
+}
+
+
+.fixTableHead {
+    overflow-y: auto; 
+    height: 800px;
+  }
+  .fixTableHead thead th {
+    /* fixed header position on top  */
+    position: sticky;
+    top: 0;   
+    background-color: rgb(35, 83, 3);
+  }
+
+  .fixTableHead table td { background-color: rgb(34, 247, 236); }
+
+  /* input {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 10px;
+  } */
+  #name {
+    border: 1px solid #007bff;
+    border-radius: 25px;
+    width: 600px;
+    height: 45px;
+    align-items: center;
+    margin-left: 300px;
+    background-color: rgb(151, 243, 247);
+    color: rgb(5, 5, 5);
+  }

@@ -1,0 +1,24 @@
+<p>databinding works!</p>
+<h2>
+    {{name}}
+    
+</h2>
+{{data.age}}
+
+<h1>property binding</h1>
+<div>
+    <img [src]="imageURL1" alt="">
+</div>
+<div>
+ 
+    <button [disabled]="isDisabled" (click)="Savedata()">Click Me</button>
+</div>
+<!-- //============================================================================ -->
+<h1>Two-Way Data Binding</h1>
+<div>
+    <input type="text" placeholder="Please enter your Department" [(ngModel)]="department" >
+</div>
+
+<div>
+    {{department}}
+</div>

@@ -1,0 +1,88 @@
+<div class="row justify-content-center" id="main">
+    <div class="col-md-10 text-left rounded shadow" >
+        
+<!-- <div class="tle"> -->
+    <h3 class="row justify-content-center mb-2 ">Random User Data using API</h3>
+  
+    <div class="input-group mb-5 searchbox col-md-10">
+      <input type="number"  [(ngModel)]="numberOfUsers" placeholder="Enter number of users">
+      
+        <button class="btn btn-primary mx-3" (click)="fetchRandomUsers()">search Users</button>
+      
+    </div>
+
+    <div class="table-container fixTableHead">
+      <table class="table rounded table table-bordered" id="usersData">
+        <thead class="sticky-header">
+          <tr>
+            <!-- <th class="head">Sr. No.</th> -->
+            <!-- <th class="head">Mr/Ms</th> -->
+            <th class="head text-center">Mr/Ms</th>
+            <th class="head text-center">First  Name</th>
+            <th class="head ">Last Name</th>
+
+            <th class="head text-center">Gender</th>
+            <th class="head text-center">DOB</th>
+            <th class="head text-center">Age</th>
+
+            <th class="head text-center">Picture</th>
+           
+           
+          
+            <!-- <th class="head">Address</th> -->
+            <th class="head text-center">Phone</th>
+            <th class="head text-center">Email</th>
+            <th class="head text-center">Username</th>
+            <th class="head text-center">Password</th>
+            <!-- <th class="head">Registered</th> -->
+            <!-- <th class="head">Cell</th> -->
+            <!-- <th class="head">ID</th> -->
+            <!-- <th class="head">Nat</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; let i = index" class="user-details">
+            <!-- <td>{{ i + 1 }}</td> -->
+            <!-- <td> {{ user.name.title }}  {{ user.name.first }}  {{ user.name.last }}</td> -->
+            <td> {{ user.name.title }} </td>
+            <td> {{ user.name.first }} </td>
+            <td> {{ user.name.last }}</td>
+
+
+             <td>{{ user.gender }}</td>
+             <td>{{ user.dob.date }}</td>
+             <td>{{ user.dob.age }}</td>
+
+            <td>
+              <img src="{{ user.picture.medium }}" alt="User Picture" />
+            </td>
+           
+           
+           
+            <!-- <td>
+              {{ user.location.street.number }}, {{ user.location.street.name }}, {{ user.location.city }},
+              {{ user.location.state }}, {{ user.location.country }}
+            </td> -->
+            <td>{{ user.phone }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.login.username }}</td>
+            <td>{{ user.login.password }}</td>
+            <!-- <td>{{ user.registered.date }}</td> -->
+            <!-- <td>{{ user.cell }}</td> -->
+            <!-- <td>{{ user.id.value }}</td> -->
+            
+            <!-- <td>{{ user.nat }}</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- <div class="mt-1">
+      <strong>Disclaimer: </strong>
+      <p class="disclaimer text-white">
+        This website displays dummy user data fetched from an external API for demonstration purposes only.
+        The information shown here is not real and should not be considered accurate or factual.
+      </p>
+    </div> -->
+    </div>
+</div>

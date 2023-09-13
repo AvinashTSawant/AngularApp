@@ -1,0 +1,45 @@
+table,
+tr,
+th,
+td {
+  border: 2px solid rgb(248, 5, 45);
+  border-collapse: collapse;
+  color: black;
+  
+}
+table{
+    background-color: rgb(247, 6, 6);
+}
+body{
+  background-color: crimson;
+}
+table {
+  /* margin-left: 850px; */
+  width: 80%;
+}
+#main{
+  margin-left: 250px;
+}
+thead{
+    z-index: 5;
+}
+
+
+.fixTableHead {
+    overflow-y: auto; 
+    height: 800px;
+  }
+  .fixTableHead thead th {
+    /* fixed header position on top  */
+    position: sticky;
+    top: 0;   
+    background-color: rgb(12, 239, 247);
+  }
+
+  .fixTableHead table td { background-color: rgb(174, 206, 32); }
+
+  input {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 10px;
+  }

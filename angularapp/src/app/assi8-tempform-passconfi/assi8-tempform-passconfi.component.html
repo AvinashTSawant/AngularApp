@@ -1,0 +1,133 @@
+<div class="container">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-12 text-left rounded shadow py-5">   
+           
+        <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+              
+         <div class="three-columns-grid">
+           <div id="cl">
+                <div class="text-center"  >
+            
+                    <img src="./assets/Developer.png" alt="Ats" class="center" height="100px">
+                
+                </div>
+                <div  class="row justify-content-center row justify-content-center">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate provident modi, itaque ab sunt obcaecati excepturi officia quasi quibusdam? Omnis libero quia ex doloremque incidunt enim magni similique corporis consequuntur.
+                </div>
+
+           </div>
+       
+
+        <div>
+            <h4 class="row justify-content-center">User Detail </h4> 
+            <div class="form-group">
+                <label for="Fullname">Fullname</label>
+                <input type="text" class="form-control"   #fname="ngModel" id="Fullname" [(ngModel)]="Fullname" name="Fullname" ngModel placeholder="Enter Fullname" required>
+                <small class="text-danger" *ngIf="fname.touched && !fname.valid">Please enter valid UserName</small>
+                <!-- <small *ngIf="Fullname">User name is : {{Fullname}}</small> -->
+            </div> 
+                  
+            <div class="form-group ">
+                <label for="DateofBirth">Date of Birth</label>
+                <input type="date" class="form-control" id="DateofBirth" name="DateofBirth" ngModel  min="2000-01-01" max="2005-01-01"/>
+              </div>
+
+              <!-- <div class="form-group">
+                <div *ngFor="let gender of genders" class="custom-control custom-radio"  [(ngModel)]="defaultgender">
+                  <input class="custom-control-input" type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" ngModel>
+                  <label class="custom-control-label" for="{{gender.id}}">{{gender.value}}</label>
+                 </div>
+             </div> -->
+
+             <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" name="gender" id="gender"  [(ngModel)]="defaultgender" ngModel required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  
+                </select>
+             </div>
+             
+             <div class="form-group">
+                <label for="Country">Country</label>
+                <select class="form-control" name="Country" id="Country"  [(ngModel)]="defaultCountry" ngModel required>
+                    <option value="INDIA">INDIA</option>
+                    <option value="US">US</option>
+                    <option value="UAE">UAE</option>
+                </select>
+             </div>
+
+             <div class="form-group">
+                <label for="Bio">Bio</label>
+                <textarea  class="form-control" id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                <!-- <textarea cols="25" row="5" class="form-control" id="Bio" [(ngModel)]="Bio" name="Bio" ngModel placeholder="Enter username" required> -->
+              <!-- <small *ngIf="username">User name is : {{username}}</small> -->
+            </div> 
+
+        </div>
+
+           <div>
+              
+           
+            <h4 class="row justify-content-center">Account Detail </h4> 
+            <div class="form-group ">
+                <label for="username">UserName</label>
+                <input type="text" class="form-control"  #name="ngModel" id="username" [(ngModel)]="username" name="username" ngModel placeholder="Enter username" required>
+                <small class="text-danger" *ngIf="name.touched && !name.valid">Please enter valid UserName</small>
+                <small *ngIf="username">User name is : {{username}}</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" pattern="^[a-zA-Z0-9]+@gmail.com" #email="ngModel" id="email" name="email" ngModel placeholder="Enter email address" email required> 
+                <small class="text-danger" *ngIf="email.touched && !email.valid">Please enter valid email @codemind.com</small> 
+            </div>
+
+
+    	   	<div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input type="password" class="form-control"  #pass="ngModel" [(ngModel)]="password"  name= password id="inputPassword" placeholder="Password"   required>
+                <small class="text-danger" *ngIf="pass.touched && !pass.valid">Please enter Password</small> 
+                <small>{{password}}</small>
+              </div>
+      
+              <div class="form-group">
+                <label for="confirmPassword" >Confirm Password</label>
+                <input type="password" class="form-control"  #configpass="ngModel" [(ngModel)]="confirmPassword"   id="confirmPassword"  name=confirmPassword   ngModel placeholder="Password"  required (Change)=data()>
+                <small class="text-danger" *ngIf= "!chack && configpass.touched && !configpass.valid"  >Please enter confirmPassword</small> 
+                  
+              </div>
+
+             
+
+               <div class="form-group checkbox">
+              <label>
+                <input type="checkbox"> Confirm that you've read the Terms and 
+                Conditions
+              </label>
+            </div>
+    	   
+
+             <!-- <button type="submit" [disabled]="!myForm.valid" class="btn btn-success mt-2">Submit</button> -->
+             <button type="submit" class="btn btn-success mt-2">Submit</button>
+           </div>
+         </div>
+             <div class="row justify-content-center mt-2" *ngIf="isFormSubmitted">
+                 
+              <h2 class="text-center">Form Data</h2>
+              <p>Fullname: <strong>{{formData.Fullname}}</strong></p>
+              <p>UserName: <strong>{{formData.username}}</strong></p>
+              <p>DOB: <strong>{{formData.DOB}}</strong></p>
+              <p>Email: <strong>{{formData.email}}</strong></p>
+              <p>Country: <strong>{{formData.Country}}</strong></p>
+              <p>Gender: <strong>{{formData.gender}}</strong></p>
+             
+              <p>password: <strong>{{formData.password}}</strong></p>
+              <p>confirmPassword: <strong>{{formData.confirmPassword}}</strong></p>
+
+            </div>
+        </form>
+    </div>
+    </div>
+</div>

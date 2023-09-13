@@ -1,0 +1,60 @@
+
+<div class="row justify-content-center" id="main">
+    <div class="col-md-10 text-left rounded shadow" >
+<div>
+    <br><br>
+    <input type="text" class="text-center" [(ngModel)]="searchTerm"  id="name"  placeholder="Search Wikipedia" >
+    <button  class="btn btn-primary mx-3" (click)="search()">Search</button>
+   
+  </div>
+  <br>
+  
+  
+            
+  <div *ngIf="searchResults text-center">
+    
+    <div class="printable-list">
+    <ul class="list-group mt-3 list-item">
+      <!-- <li class="list-group-item" *ngFor="let result of searchResults "> -->
+        <li class="gif  list-item" *ngFor="let result of searchResults | paginate:{id:'listing_pagination', itemsPerPage: 10, currentPage: page, totalItems: totalRecords}">
+        <img [src]="result.images.fixed_width.url" alt="{{ result.title }}">
+      </li>
+    </ul>
+    </div>
+
+    <div>
+      <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page=$event" ></pagination-controls>
+  </div>
+
+
+
+<!--     
+        <div class="table-container fixTableHead">
+              <table class="table rounded table table-bordered" id="usersData">
+                <thead class="sticky-header">
+                  <tr>
+            
+                    <th class=" text-center">Title</th>
+                    <th class="text-center">id</th>
+                    <th class="text-center">trending_datetime</th>
+        
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let result of searchResults; let i = index" class="user-details">
+                    <td> {{result.title }} </td>
+                    <td> {{result.id}} </td>
+                    <td><img [src]="result.images.fixed_width.url" alt="{{ result.title }}" /></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+       -->
+        
+        </div>
+    </div>
+
+  
+
+

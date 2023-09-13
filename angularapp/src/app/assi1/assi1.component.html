@@ -1,0 +1,17 @@
+<p>assi1</p>
+
+
+<!-- //============================================================================ -->
+<h1>Two-Way Data Binding</h1>
+<div>
+    <label for ='username 'class='uName'>User_Name :- </label>
+    <input type="text"  class="box" placeholder="Please enter Username" [(ngModel)]="department" >
+</div>
+
+<span class="output">
+   Output:- {{department}}
+</span>
+
+<div>
+    <button [disabled]="department=='' " (click)="Reset()">Reset Me</button>
+</div>

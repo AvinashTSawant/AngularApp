@@ -1,0 +1,58 @@
+<h3 class="row justify-content-center">User Detalis</h3>
+<!-- <div *ngFor="let product of products">
+    {{product.id}} 
+    {{product.name}}
+   </div> -->
+
+
+
+
+  <div class="row justify-content-center">
+    <div class="col-md-11 text-left rounded shadow">
+      <!-- <div  class="table-responsive"> -->
+      <table class="table  border-info table-bordered mt-4 ms-2 me-2 bg-transparent table-striped ">
+
+        <thead  class="table-warning">
+          <tr>
+            <th  class="text-center "scope="col">ID</th>
+            <th class="text-center "scope="col" >Name</th>
+            <th class="text-center "scope="col" >Username</th>
+            <th  class="text-center "scope="col">Email</th>
+            <th  class="text-center "scope="col">Address</th>
+            <th  class="text-center "scope="col">city</th>
+            <th  class="text-center "scope="col" >company</th>
+            <th  class="text-center "scope="col">catchPhrase</th>
+            <th  class="text-center "scope="col">bs</th>
+            <th  class="text-center "scope="col">Phone no</th>
+            <th class="text-center "scope="col" >Lat</th>
+            <th class="text-center "scope="col">Lng</th>
+            <th class="text-center "scope="col">website</th>
+          </tr>
+        </thead>
+        <tbody  class="table border-info bg-transparent">
+          <tr *ngFor="let value of obj1">
+            <td class="table-danger">{{ value.id }}</td>
+            <td>{{ value.name }}</td>
+            <td>{{ value.username }}</td>
+            <td>{{ value.email }}</td>
+            <td>
+              {{ value.address.street }} ,{{ value.address.suite }} ,{{
+                value.address.city
+              }},{{ value.address.zipcode }}
+            </td>
+            <td>{{ value.address.city }}</td>
+            <td>{{ value.company.name }}</td>
+            <td>{{ value.company.catchPhrase }}</td>
+            <td>{{ value.company.bs }}</td>
+
+            <td>{{ value.phone }}</td>
+            <td>{{ value.address.geo.lat }}</td>
+            <td>{{ value.address.geo.lng }}</td>
+
+            <td>{{ value.website }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- </div> -->

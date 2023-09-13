@@ -1,0 +1,35 @@
+
+
+/* table,tr,th,td {
+   
+  border: 2px solid pink;
+  border-collapse: collapse;
+  size: auto;
+} */
+
+
+/* container */
+.three-columns-grid {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* columns */
+.three-columns-grid > * {
+    padding:1rem;
+}
+
+img{
+    border-radius: 50%;
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+  #cl{
+      margin: 100px;
+      
+  }

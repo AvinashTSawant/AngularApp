@@ -1,0 +1,60 @@
+
+<div >
+    <input type="checkbox" [checked]="showContent" (change)="showContent = !showContent" />
+    <label>Add and Remove Content</label>
+</div>
+<div *ngIf="showContent">
+    <h2>Hi welcome to  Angular</h2>
+</div>
+
+
+
+<div>
+    <div>
+      {{ courses }}
+    </div>
+    <div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="text-primary">Sr_No</th>
+            <th class="text-primary">courses</th>
+            <th class="text-primary">S_ID</th>
+            <th class="text-primary">S_Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let courses of course">
+            <td>{{ courses.Sr_No }}</td>
+            <td>{{ courses.courses }}</td>
+            <td>{{ courses.Sid }}</td>
+            <td>{{ courses.Sname }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+<div class="container">
+    <div class="col-md-4">
+        <select class="form-control" (change)="getProductValue($event)">
+            <option value="Default">Select Color</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="yellow">yellow</option>
+       
+        </select>
+    </div>
+    <div class="col-md-12" [ngSwitch]="selectedColor">
+        <h2 class="text-success" *ngSwitchDefault>Please select Color</h2>
+        <h2 class="text-success" *ngSwitchCase="'Green'">Geren</h2>
+        <h2 class="text-success" *ngSwitchCase="'Red'">Red</h2>
+        <h2 class="text-success" *ngSwitchCase="'yellow'">yellow</h2>
+    
+
+    </div>
+</div>
